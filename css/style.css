@@ -1,0 +1,913 @@
+@font-face {
+   font-family: "Lato";
+   src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+       url("../fonts/Lato-Regular.woff") format("woff");
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Lato";
+   src: url("../fonts/Lato-Bold.woff2") format("woff2"),
+       url("../fonts/Lato-Bold.woff") format("woff");
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Lato";
+   src: url("../fonts/Lato-Black.woff2") format("woff2"),
+       url("../fonts/Lato-Black.woff") format("woff");
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+body{
+   font-family: "Lato";
+}
+[class*="__container"]{
+   margin: 0 auto;
+   /* min-width: 1250px; */
+   padding: 0 5px 0;
+   width: 70%;
+}
+
+.nav{
+   background-color: rgb(22, 22, 107);
+   width: 100%;
+   position: fixed;
+   z-index: 5;
+}
+.nav__list{
+   padding: 20px 0;
+   
+   
+}
+.nav__list>li{
+   display: inline-block;
+   color: rgba(222, 203, 203, 0.555);
+   font-weight: 300;
+   font-size: 19px;
+}
+.nav__list li:not(:last-child){
+  margin-right: 20px;
+}
+.nav__list>li>a:hover{
+   border-bottom: 1px solid coral;
+}
+
+
+.poem{
+   display: none;
+}
+.poem:target{
+   display: block;
+   
+}
+.blok {
+   max-width: 400px;
+   border-radius: 5px;
+   padding:10px 0;
+   background-color: rgba(46, 130, 189, 0.332);
+}
+.h2{
+   
+   padding: 80px 30px 30px 30px;
+   font-weight: 600;
+   color: rgba(167, 174, 194, 0.523);
+   font-size: 40px;
+   text-align: center;
+}
+.blok__text {
+   
+   font-weight: 300;
+   color: rgba(157, 74, 22, 0.686);
+   font-size: 20px;
+   text-align: center;
+   opacity: 0;
+   visibility: hidden;
+}
+.blok:hover .blok__text  {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+   
+}
+.link_1>a:focus{
+   outline: 3px solid coral;
+   border-radius: 85% 15% 90% 10% / 12% 81% 19% 88%;
+   padding: 30px;
+   background-color: rgba(44, 42, 87, 0.381);
+   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.link_1{
+   font-weight: 500;
+   color: 167, 174, 194, 0.523;
+   text-align: center;
+   font-size: 40px;
+   color: rgba(167, 174, 194, 0.523);
+   margin-bottom: 150px;
+}
+.link_1>a{
+   color: rgba(89, 146, 193, 0.85);
+  
+}
+.link_1>a:hover{
+   border-bottom: 1px solid rgb(201, 50, 50);
+   
+}
+.link_1>a:active{
+   color: rgba(89, 146, 193, 0.451);
+}
+.link_1>a:visited{
+   color: rgb(133, 7, 121);
+}
+.cat__h2{
+   padding: 30px;
+   font-weight: 600;
+   color: rgba(44, 93, 228, 0.523);
+   font-size: 40px;
+   text-align: center;
+   
+}
+.list__cats{
+   display: none;
+}
+.list__cats:target{
+   display: block;
+   
+}
+.list__cats{
+   padding-top: 80px;
+   max-width: 600px;
+   margin-bottom: 150px;
+}
+.img__cat{
+   width: 140px;
+   margin-left:  50%;
+   left: 140px;
+   
+   padding: 10px;
+   position: absolute;
+   display: none;
+}
+.list__ul>li{
+   position: relative;
+   width: 400px;
+}
+
+.text__cat {
+   font-weight: 600;
+   color: rgba(2, 33, 36, 0.541);
+   font-size: 30px;
+   padding: 40px;
+}
+.text__cat:hover  .img__cat{
+  display: block;
+}
+.list__ul-2>li>img{
+   padding: 30px;
+}
+.list__ul-2{
+   display: none;
+   position: absolute;
+}
+.list__ul:hover .list__ul-2{
+  display: block;
+  opacity: 1;
+   visibility: visible;
+   position: relative;
+}
+
+.ul__text{
+   padding-top: 80px;
+   width: 100%;
+   min-height: 100vh;  
+   background-color: rgba(142, 178, 198, 0.625);
+}
+.ul__text{
+   display: none;
+}
+.ul__text:target{
+   display: block;
+}
+.ul__h2{
+   margin:  30px;
+   font-weight: 600;
+   color: rgba(40, 84, 50, 0.523);
+   font-size: 40px;
+   text-align: center;
+}
+.ul__blok{
+   width: 500px;
+   background-color: rgb(222, 193, 168);
+   border-radius: 5px;
+   margin: 0 auto;
+}
+.ul__blok div:last-child{
+   color: rgb(202, 23, 23);
+   background-color: rgb(56, 42, 90);
+   font-weight: 600;
+   font-size: 30px;
+   padding: 0 0 30px 20px;
+   border: 1px solid rgb(0, 0, 0);
+}
+.ul__li-text>li{
+   color: rgba(128, 23, 221, 0.882);
+   font-weight: 600;
+   font-size: 30px;
+   padding: 0 0 30px 20px;
+   border: 1px solid rgb(0, 0, 0);
+   text-align: center;
+}
+
+.ul__li-text li:nth-child(odd){
+   color: rgb(202, 23, 23);
+   background-color: rgb(56, 42, 90);
+}
+
+.strong{
+   padding-top: 80px;
+   width: 100%;
+   min-height: 100vh;  
+   background-color: rgba(8, 37, 53, 0.625);
+}
+.strong{
+   display: none;
+}
+.strong:target{
+   display: block;
+}
+.strong_h2{
+   padding: 30px;
+   font-weight: 600;
+   color: rgba(185, 194, 18, 0.523);
+   font-size: 40px;
+   text-align: center;
+}
+.blok__strong{
+   margin: 0 auto;
+   width: 900px;
+   padding: 15px;
+   background-color: rgb(105, 96, 96);
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 6px;
+   box-shadow:8px 8px 24px 0px rgba(66, 68, 90, 1) ;
+}
+.blok_h2{
+   font-weight: 500;
+   color: rgba(2, 133, 209, 0.838);
+   font-size: 48px;
+   text-align: center;
+}
+.strong__img{
+   width: 100%;
+  
+}
+.strong__img>img{
+   display: block;
+   margin: 0 auto;
+   width: 250px;
+   padding: 10px;
+}
+.strong__text{
+  
+   width: 800px;
+   height: 200px;
+   margin: 0 auto;
+   overflow: auto;
+}
+.strong__text>p{
+   padding: 15px;
+   color: rgb(224, 191, 191);
+   font-weight: 300;
+   font-size: 29px;
+   line-height: 2;
+
+}
+.blok__strong div:last-child{
+   margin-bottom: 20px;
+}
+.blok__strong div:first-child{
+   margin: 40px 0 30px;
+}
+
+.my__day-wraper{
+   padding-top: 80px;
+   width: 100%;
+   min-height: 100vh;  
+   background-color: rgba(35, 31, 19, 0.446);
+}
+.my__day-wraper:target{
+   display: block;
+}
+.my__day-wraper{
+   display: none;
+}
+
+.mu__day-h2{
+   margin:  30px;
+   font-weight: 600;
+   color: rgba(69, 69, 53, 0.523);
+   font-size: 40px;
+   text-align: center;
+}
+.mu__day-ul>li>p{
+   
+   color: rgba(40, 52, 59, 0.778);
+   font-weight: 300;
+   font-size: 30px;
+}
+.mu__day-ul>li{
+   margin: 10px 0;
+   min-height: 15px;
+   
+}
+
+.morning{
+   position: relative;
+}
+.morning::before{
+   content:"🕔";
+   
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0;
+   left:  -60px;
+  
+}
+.morning::after{
+   content:"🤸";
+   
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   /* left: 600px; */
+   opacity: 0;
+   visibility: hidden;
+}
+
+.morning__li:hover .morning::after{
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+.breakfast{
+   position: relative;
+}
+.breakfast::before{
+   content:"☕";
+   
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px;
+  
+}
+.breakfast::after{
+   content:"🌭";
+  
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+.breakfast__li:hover .breakfast::after{
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.road{
+   position: relative;
+}
+.road::before{
+   content:"🚵";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px;
+}
+.road::after {
+   content:"😭";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+.road__li:hover .road::after  {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.work {
+   position: relative;
+}
+.work::before{
+   content:"😱";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px;
+}
+.work::after{
+   content:"🤯";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.work__li:hover .work::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.sport {
+   position: relative;
+}
+.sport::before{
+   content:"🏋";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.sport::after{
+   content:"🤼";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden
+}
+.sport__li:hover .sport::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.chief {
+   position: relative;
+}
+.chief::before {
+   content:"😈";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.chief::after {
+   content:"🤬";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden
+}
+.chief__li:hover .chief::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+.way__home {
+   position: relative;
+}
+.way__home::before {
+   content:"🥊";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.way__home::after {
+   content:"🥷";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden
+}
+.way__home_li:hover .way__home::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+
+.dinner {
+   position: relative;
+}
+.dinner::before {
+   content:"🍟";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.dinner::after {
+   content:"🍺";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden
+}
+.dinner__li:hover .dinner::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+.the__game {
+   position: relative;
+}
+.the__game::before {
+   content:"🕹";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.the__game::after {
+   content:"🎞";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+.the__game_li:hover .the__game::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.movie {
+   position: relative;
+}
+.movie::before {
+   content:"😪";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   left:  -60px
+}
+.movie::after {
+   content:"🥴";
+   display: inline-block;
+   position: absolute;
+  width: 50px;
+  height: 50px;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+.movie__li:hover .movie::after {
+   visibility: visible;
+   opacity: 1;
+   transition: 1.1s;
+}
+
+.background__dog{
+   padding-top: 80px;
+   width: 100%;
+   min-height: 100vh;  
+   margin: 0 auto;
+   background: url("../img/slide-41.jpeg") center no-repeat;
+}
+
+.background__dog{
+   display: none;
+   position: relative;
+}
+.background__dog:target{
+   display: block;
+}
+.background__h2{
+   margin: 40px 20px 0 0;
+   
+   font-weight: 600;
+   color: rgb(0, 0, 0);
+   font-size: 30px;
+   text-align: end;
+
+   
+}
+.blok_start{
+   background-color: #c91c1c;
+   cursor: pointer;
+   display: inline-block;
+   padding: 50px 50px;
+   border-radius: 
+   68% 32% 93% 7% / 75% 17% 83% 25%;
+   transform: rotateX(30px);
+   position: relative;
+   left: 45%;
+   top: 250px;
+}
+@keyframes glowing {
+   0% { background-color: #a851057b; box-shadow: 0 0 5px #a83105; }
+   50% { background-color: #e60404; box-shadow: 0 0 20px #77860477; }
+   100% { background-color: #e3ca108b; box-shadow: 0 0 5px #dd20cd; }
+   }
+   .blok_start {
+   animation: glowing 1300ms infinite;
+}
+
+
+.blok_start:hover .blok__way{
+   display: block;
+   /* visibility: visible;
+   opacity: 1; */
+   /* transition: 1.1s; */
+}
+.blok__way{
+   height: 40px;
+   width: 90px;
+   background-color: rgb(147, 93, 19);
+   border-radius:87% 13% 81% 19% / 64% 28% 72% 36%  ;
+   position: absolute;
+   left: 80px;
+   bottom: 60px;
+   display: none;
+   /* opacity: 0;
+   visibility: hidden; */
+}
+.blok__way:hover .blok__way_1{
+   display: block;
+   /* visibility: visible;
+   opacity: 1; */
+   /* transition: 1.1s; */
+}
+.blok__way_1{
+   height: 35px;
+   width: 75px;
+   background-color: rgb(147, 93, 19);
+   border-radius: 87% 13% 81% 19% / 64% 28% 72% 36%  ;
+   position: absolute;
+   left: 60px;
+   bottom: 20px;
+   display: none;
+   /* opacity: 0;
+   visibility: hidden; */
+}
+.blok__way_1:hover .blok__way_2{
+   display: block;
+   /* visibility: visible;
+   opacity: 1; */
+}
+
+.blok__way_2{
+   height: 25px;
+   width: 65px;
+   background-color: rgb(147, 93, 19);
+   border-radius: 87% 13% 81% 19% / 64% 28% 72% 36%  ;
+   position: absolute;
+   left: 70px;
+   bottom: 25px;
+   display: none;
+   /* opacity: 0;
+   visibility: hidden; */
+}
+
+.blok__way_3{
+   height: 20px;
+   width: 60px;
+   background-color: rgb(147, 93, 19);
+   border-radius: 0% 100% 0% 100% / 27% 68% 32% 73%;
+   position: absolute;
+   
+   left: 50px;
+   bottom: 10px;
+   display: none;
+}
+.blok__way_2:hover .blok__way_3{
+   display: block;
+}
+
+.blok__way_4{
+   height: 20px;
+   width: 60px;
+   background-color: rgb(147, 93, 19);
+   border-radius: 100% 0% 100% 0% / 71% 19% 81% 29%  ;
+   position: absolute;
+   
+   left: 50px;
+   bottom: 5px;
+   display: none;
+}
+.blok__way_3:hover .blok__way_4{
+   display: block;
+}
+.blok__way_4:hover  .blok__way_dog1{
+   display: block;
+}
+.blok__img_dog1:hover .blok__img_dog1{
+   display: block;
+}
+.blok__way_dog1{
+   position: relative;
+}
+.blok__way_dog1 >.blok__img_dog1{
+   width: 300px;
+   height: 200px;
+  position: absolute;
+  right: 470px;
+  bottom: 10px;
+   transform: rotate( 180deg);
+   
+}
+.blok__way_dog1::before{
+   content:"Добре пішло!";
+   display: inline-block;
+   width: 180px;
+   height: 40px;
+   position: absolute;
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   font-size: 30px;
+   right: 550px;
+  bottom: 80px;
+   z-index: 3;
+   
+}
+
+
+
+.blok_lesson{
+   display: none;
+}
+.blok_lesson:target{
+   display: block;
+   
+}
+.blok_lesson {
+   max-width: 100%;
+   padding: 80px 0 30px 0;
+}
+.blok_lesson-text{
+   max-width: 60%;
+}
+.blok_h2{
+   font-weight: 900;
+   font-size: 46px;
+   color: #1E212C;
+   text-align: left;
+   padding-bottom: 40px;
+}
+.text__blok{
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #424551;
+   padding-bottom: 50px;
+}
+.blok__h3{
+   font-weight: 500;
+   font-size: 28px;
+   color: #1E212C;
+   padding-bottom: 25px;
+}
+.list__lesson{
+   margin-bottom: 50px;
+}
+.list__lesson>li{
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 1.6;
+   min-height: 30px;
+   
+   position: relative;
+}
+.list__lesson>li::before{
+   content:"";
+   display: inline-block;
+   /* position: absolute; */
+   text-align: center;
+   background: url("../icons/check.svg") no-repeat;
+   width: 16px;
+   height: 16px;
+   margin-right: 20px;
+   /* left: -20px; */
+   /* margin: 0 20px 0 0; */
+  
+}
+.bold{
+   display: inline-block;
+   font-weight: 600;
+   font-size: 16px;
+   color: #1E212C;
+   margin-bottom: 20px;
+}
+.blok_h2-bold{
+   font-weight: 600;
+   font-size: 46px;
+   margin-bottom: 20px;
+}
+.span_text{
+   display: inline-block;
+   font-weight: 300;
+   font-size: 20px;
+   color: #787A80;
+   margin-bottom: 30px;
+}
+.list__footer{
+   
+   margin-bottom: 35px;
+}
+.list__footer>li{
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #424551;
+}
+
+.star::before{
+   content:"";
+   display: inline-block;
+   background: url("../icons/Star.svg");
+   width: 16px;
+   height: 16px;
+   margin-right: 10px;
+}
+.play::before{
+   content:"";
+   display: inline-block;
+   background: url("../icons/Play.svg");
+   width: 16px;
+   height: 16px;
+   margin-right: 10px;
+}
+.profile::before{
+   content:"";
+   display: inline-block;
+   background: url("../icons/Profile.svg");
+   width: 16px;
+   height: 16px;
+   margin-right: 10px;
+}
+.text__footer{
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #424551;
+   margin-bottom: 40px;
+}
+.blok__href{
+   width: 400px;
+}
+.blok__href a:not(:last-child){
+  padding-right: 20px;
+}
+.blok__href>a>img{
+   
+  color: #000;
+}
+.blok__href a:hover{
+  color: #a83105;
+}
